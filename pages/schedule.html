@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kedy ma zastihnete — Dmytro Makhanok</title>
+  <meta name="description" content="Týždenný rozvrh Dmytra Makhanoka v zimnom semestri — kedy mám výučbu a kedy ma zastihnete.">
+  <meta property="og:title" content="Kedy ma zastihnete — Dmytro Makhanok">
+  <meta property="og:description" content="Týždenný rozvrh Dmytra Makhanoka v zimnom semestri — kedy mám výučbu a kedy ma zastihnete.">
+  <meta property="og:image" content="https://webte1.fei.stuba.sk/~xmakhanok/Z1_Makhanok/img/me.jpg">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/print.css">
+  <script src="../js/main.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Preskočiť na obsah</a>
+
+  <header class="header no-print">
+    <div class="container header__bar">
+      <a href="../index.html" class="brand">
+        <span class="brand__monogram" aria-hidden="true">DM</span>
+        <span class="brand__text">
+          <span class="brand__name">Dmytro Makhanok</span>
+          <span class="brand__slogan">Softvérový inžinier a študent aplikovanej informatiky</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav no-print" id="primary-nav" aria-label="Hlavná navigácia">
+    <ul class="container nav__list">
+      <li class="nav__item"><a href="../index.html" class="nav__link">Profil</a></li>
+      <li class="nav__item"><a href="cv.html" class="nav__link">Životopis</a></li>
+      <li class="nav__item"><a href="workspace.html" class="nav__link">Moje koníčky</a></li>
+      <li class="nav__item"><a href="schedule.html" class="nav__link nav__link--active" aria-current="page">Kedy ma zastihnete</a></li>
+      <li class="nav__item"><a href="map.html" class="nav__link">Kde ma nájdete</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="container">
+    <h1>Kedy ma zastihnete</h1>
+    <p>V tabuľke je môj rozvrh na zimný semester. Mimo týchto hodín ma zastihnete v práci alebo na tréningu — najlepšie mailom alebo telefonicky.</p>
+
+    <h2>Týždenný rozvrh</h2>
+
+    <div class="filters" role="group" aria-label="Filter rozvrhu">
+      <button type="button" class="btn btn--active" data-filter="all" aria-pressed="true">Všetko</button>
+      <button type="button" class="btn" data-filter="lecture" aria-pressed="false">Prednášky</button>
+      <button type="button" class="btn" data-filter="exercise" aria-pressed="false">Cvičenia</button>
+      <button type="button" class="btn" data-filter="pe" aria-pressed="false">Telesná kultúra</button>
+    </div>
+
+    <p id="scheduleStatus" class="schedule-status" aria-live="polite"></p>
+
+    <div class="table-scroll">
+      <table class="schedule" id="scheduleTable">
+        <thead>
+          <tr>
+            <th scope="col">Deň</th>
+            <th scope="col">7.00-7.50</th>
+            <th scope="col">8.00-8.50</th>
+            <th scope="col">9.00-9.50</th>
+            <th scope="col">10.00-10.50</th>
+            <th scope="col">11.00-11.50</th>
+            <th scope="col">12.00-12.50</th>
+            <th scope="col">13.00-13.50</th>
+            <th scope="col">14.00-14.50</th>
+            <th scope="col">15.00-15.50</th>
+            <th scope="col">16.00-16.50</th>
+            <th scope="col">17.00-17.50</th>
+            <th scope="col">18.00-18.50</th>
+            <th scope="col">19.00-19.50</th>
+            <th scope="col">20.00-20.50</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Po</th>
+            <td class="cell cell--empty" colspan="2"></td>
+            <td class="cell" data-type="exercise" data-day="1" data-start="09:00" data-end="10:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Operačné systémy</p>
+                <p class="cell-meta">cpu-e · M. Jókay</p>
+              </div>
+            </td>
+            <td class="cell" data-type="exercise" data-day="1" data-start="11:00" data-end="12:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Webové technológie 1</p>
+                <p class="cell-meta">c137 · K. Žáková</p>
+              </div>
+            </td>
+            <td class="cell" data-type="lecture" data-day="1" data-start="13:00" data-end="14:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Mikropočítače a ich programovanie</p>
+                <p class="cell-meta">de300 · P. Kubinec</p>
+              </div>
+            </td>
+            <td class="cell" data-type="lecture" data-day="1" data-start="15:00" data-end="16:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Lineárna algebra 2</p>
+                <p class="cell-meta">cd300 · J. Šiagiová</p>
+              </div>
+            </td>
+            <td class="cell cell--empty" colspan="4"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row">Ut</th>
+            <td class="cell cell--empty"></td>
+            <td class="cell" data-type="lecture" data-day="2" data-start="08:00" data-end="09:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Analýza a zložitosť algoritmov</p>
+                <p class="cell-meta">de300 · M. Bečka</p>
+              </div>
+            </td>
+            <td class="cell" data-type="lecture" data-day="2" data-start="10:00" data-end="11:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Webové technológie 1</p>
+                <p class="cell-meta">cd150 · K. Žáková</p>
+              </div>
+            </td>
+            <td class="cell cell--empty" colspan="3"></td>
+            <td class="cell" data-type="lecture" data-day="2" data-start="15:00" data-end="16:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Softvérové inžinierstvo</p>
+                <p class="cell-meta">cd300 · O. Gallo</p>
+              </div>
+            </td>
+            <td class="cell" data-type="exercise" data-day="2" data-start="17:00" data-end="17:50">
+              <div class="cell-content">
+                <p class="cell-subject">Softvérové inžinierstvo</p>
+                <p class="cell-meta">cd300 · O. Gallo</p>
+              </div>
+            </td>
+            <td class="cell cell--empty" colspan="3"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row" rowspan="2">St</th>
+            <td class="cell cell--empty" rowspan="2"></td>
+            <td class="cell" data-type="lecture" data-day="3" data-start="08:00" data-end="09:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Operačné systémy</p>
+                <p class="cell-meta">cd300 · M. Jókay</p>
+              </div>
+            </td>
+            <td class="cell" data-type="lecture" data-day="3" data-start="10:00" data-end="11:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Analýza a zložitosť algoritmov</p>
+                <p class="cell-meta">bc150 · M. Bečka</p>
+              </div>
+            </td>
+            <td class="cell cell--empty"></td>
+            <td class="cell" data-type="lecture" data-day="3" data-start="13:00" data-end="14:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Webové technológie 1</p>
+                <p class="cell-meta">cd150 · K. Žáková</p>
+              </div>
+            </td>
+            <td class="cell cell--empty" colspan="6" rowspan="2"></td>
+          </tr>
+          <tr>
+            <td class="cell cell--empty"></td>
+            <td class="cell" data-type="pe" data-day="3" data-start="09:00" data-end="09:50">
+              <div class="cell-content">
+                <p class="cell-subject">Telesná kultúra 5</p>
+                <p class="cell-meta">pos · M. Jeleň</p>
+              </div>
+            </td>
+            <td class="cell cell--empty" colspan="5"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row">Št</th>
+            <td class="cell cell--empty" colspan="5"></td>
+            <td class="cell" data-type="exercise" data-day="4" data-start="12:00" data-end="12:50">
+              <div class="cell-content">
+                <p class="cell-subject">Softvérové inžinierstvo</p>
+                <p class="cell-meta">c137 · O. Gallo</p>
+              </div>
+            </td>
+            <td class="cell cell--empty" colspan="8"></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row">Pi</th>
+            <td class="cell cell--empty" colspan="2"></td>
+            <td class="cell" data-type="exercise" data-day="5" data-start="09:00" data-end="09:50">
+              <div class="cell-content">
+                <p class="cell-subject">Analýza a zložitosť algoritmov</p>
+                <p class="cell-meta">cd150 · M. Bečka</p>
+              </div>
+            </td>
+            <td class="cell" data-type="exercise" data-day="5" data-start="10:00" data-end="11:50" colspan="2">
+              <div class="cell-content">
+                <p class="cell-subject">Mikropočítače a ich programovanie</p>
+                <p class="cell-meta">e133 · P. Kubinec</p>
+              </div>
+            </td>
+            <td class="cell cell--empty"></td>
+            <td class="cell" data-type="exercise" data-day="5" data-start="13:00" data-end="13:50">
+              <div class="cell-content">
+                <p class="cell-subject">Lineárna algebra 2</p>
+                <p class="cell-meta">bc35 · D. Pancza</p>
+              </div>
+            </td>
+            <td class="cell cell--empty" colspan="7"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p id="filterEmptyMessage" class="schedule-empty" hidden>Pre tento filter nie sú v rozvrhu žiadne položky.</p>
+
+    <div class="legend">
+      <span class="legend__item"><span class="legend__swatch legend__swatch--lecture"></span>Prednáška</span>
+      <span class="legend__item"><span class="legend__swatch legend__swatch--exercise"></span>Cvičenie</span>
+      <span class="legend__item"><span class="legend__swatch legend__swatch--pe"></span>Telesná kultúra</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress__bar" id="semesterProgress" role="progressbar" aria-label="Priebeh semestra" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress__fill" id="semesterProgressFill"></div>
+      </div>
+      <p id="semesterProgressLabel" class="progress__label"></p>
+    </div>
+  </main>
+
+  <footer class="footer no-print">
+    <div class="container footer__inner">
+      <address>
+        Dmytro Makhanok, Bratislava ·
+        <a href="mailto:dmmhnk23@gmail.com">dmmhnk23@gmail.com</a> ·
+        <a href="tel:+421952061292">+421 952 061 292</a>
+      </address>
+      <p>
+        &copy; 2026 Dmytro Makhanok · Fotografie: vlastné ·
+        Mapové podklady: <a href="https://www.openstreetmap.org/copyright">&copy; prispievatelia OpenStreetMap</a> ·
+        Knižnica: <a href="https://leafletjs.com/">Leaflet</a> ·
+        Písmo: <a href="https://github.com/itfoundry/Poppins">Poppins</a> (SIL Open Font License 1.1)
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

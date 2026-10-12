@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kde ma nájdete — Dmytro Makhanok</title>
+  <meta name="description" content="Interaktívna mapa so školou FEI STU a bydliskom Dmytra Makhanoka — pridaj si vlastné miesto a zisti vzdialenosť.">
+  <meta property="og:title" content="Kde ma nájdete — Dmytro Makhanok">
+  <meta property="og:description" content="Interaktívna mapa so školou FEI STU a bydliskom Dmytra Makhanoka — pridaj si vlastné miesto a zisti vzdialenosť.">
+  <meta property="og:image" content="https://webte1.fei.stuba.sk/~xmakhanok/Z1_Makhanok/img/me.jpg">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/print.css">
+  <script src="../js/main.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Preskočiť na obsah</a>
+
+  <header class="header no-print">
+    <div class="container header__bar">
+      <a href="../index.html" class="brand">
+        <span class="brand__monogram" aria-hidden="true">DM</span>
+        <span class="brand__text">
+          <span class="brand__name">Dmytro Makhanok</span>
+          <span class="brand__slogan">Softvérový inžinier a študent aplikovanej informatiky</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav no-print" id="primary-nav" aria-label="Hlavná navigácia">
+    <ul class="container nav__list">
+      <li class="nav__item"><a href="../index.html" class="nav__link">Profil</a></li>
+      <li class="nav__item"><a href="cv.html" class="nav__link">Životopis</a></li>
+      <li class="nav__item"><a href="workspace.html" class="nav__link">Moje koníčky</a></li>
+      <li class="nav__item"><a href="schedule.html" class="nav__link">Kedy ma zastihnete</a></li>
+      <li class="nav__item"><a href="map.html" class="nav__link nav__link--active" aria-current="page">Kde ma nájdete</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="container">
+    <h1>Kde ma nájdete</h1>
+    <p>
+      Tu je moja škola a moje bydlisko. Klikni na mapu, pridaj si vlastný bod (napríklad
+      obľúbenú kaviareň), pomenuj ho a potom si vyber, či ho chceš porovnať so školou
+      alebo s domovom — aplikácia sama dopočíta vzdialenosť aj spojnicu medzi miestami.
+    </p>
+
+    <section>
+      <h2>Interaktívna mapa</h2>
+
+      <div class="map-layout">
+        <div id="map" class="map"></div>
+
+        <aside class="map-panel">
+          <h3>Moje pridané miesta</h3>
+
+          <p id="mapEmptyState" class="map-empty">
+            Mapa je zatiaľ prázdna. Klikni ľavým tlačidlom myši kdekoľvek na mapu a pridaj
+            svoje prvé miesto — hneď sa objaví tu v zozname aj na mape.
+          </p>
+
+          <form id="addPointForm" class="distance-form" hidden>
+            <div class="form-row">
+              <label for="pointName">Názov nového miesta</label>
+              <input type="text" id="pointName" name="name" maxlength="60" autocomplete="off" required>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn">Pridať miesto</button>
+              <button type="button" class="btn" id="cancelPoint">Zrušiť</button>
+            </div>
+          </form>
+
+          <form id="distanceForm" class="distance-form" hidden>
+            <div class="form-row">
+              <label for="pointSelect">Moje miesto</label>
+              <select id="pointSelect" name="point"></select>
+            </div>
+
+            <div class="form-row">
+              <label for="targetSelect">Vzdialenosť od</label>
+              <select id="targetSelect" name="target">
+                <option value="school">Škola</option>
+                <option value="home">Domov</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn">Vypočítať vzdialenosť</button>
+          </form>
+
+          <p id="mapResult" class="map-result" aria-live="polite"></p>
+
+          <ul id="pointsList" class="points-list"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <p class="source-note">
+      Mapové podklady: &copy;
+      <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">prispievatelia OpenStreetMap</a>.
+      Mapa je vykreslená knižnicou
+      <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a>.
+    </p>
+  </main>
+
+  <footer class="footer no-print">
+    <div class="container footer__inner">
+      <address>
+        Dmytro Makhanok, Bratislava ·
+        <a href="mailto:dmmhnk23@gmail.com">dmmhnk23@gmail.com</a> ·
+        <a href="tel:+421952061292">+421 952 061 292</a>
+      </address>
+      <p>
+        &copy; 2026 Dmytro Makhanok · Fotografie: vlastné ·
+        Mapové podklady: <a href="https://www.openstreetmap.org/copyright">&copy; prispievatelia OpenStreetMap</a> ·
+        Knižnica: <a href="https://leafletjs.com/">Leaflet</a> ·
+        Písmo: <a href="https://github.com/itfoundry/Poppins">Poppins</a> (SIL Open Font License 1.1)
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../js/map.js"></script>
+</body>
+</html>

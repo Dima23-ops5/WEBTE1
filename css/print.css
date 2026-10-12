@@ -1,0 +1,59 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+
+  :root {
+    --color-text: var(--color-print-text);
+    --color-muted: var(--color-print-muted);
+    --color-bg: var(--color-print-bg);
+    --color-surface: var(--color-print-bg);
+    --color-border: var(--color-print-border);
+  }
+
+  .no-print,
+  .skip-link {
+    display: none !important;
+  }
+
+  body {
+    background: var(--color-print-bg);
+    color: var(--color-print-text);
+    font-size: 10pt;
+  }
+
+  main {
+    min-height: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .cv {
+    grid-template-columns: 12rem 1fr;
+    border: 0;
+  }
+
+  .cv__side,
+  .cv__main {
+    padding: 0 var(--space-md);
+    background: none;
+  }
+
+  .cv__photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .cv__section + .cv__section {
+    margin-top: var(--space-md);
+  }
+
+  .cv__section {
+    break-inside: avoid;
+  }
+}

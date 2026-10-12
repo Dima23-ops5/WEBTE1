@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moje koníčky — Dmytro Makhanok</title>
+  <meta name="description" content="Veci na mojom stole, ktoré ma reprezentujú — štúdium, programovanie, čítanie a šport.">
+  <meta property="og:title" content="Moje koníčky — Dmytro Makhanok">
+  <meta property="og:description" content="Veci na mojom stole, ktoré ma reprezentujú — štúdium, programovanie, čítanie a šport.">
+  <meta property="og:image" content="https://webte1.fei.stuba.sk/~xmakhanok/Z1_Makhanok/img/workspace.jpg">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/print.css">
+  <script src="../js/main.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Preskočiť na obsah</a>
+
+  <header class="header no-print">
+    <div class="container header__bar">
+      <a href="../index.html" class="brand">
+        <span class="brand__monogram" aria-hidden="true">DM</span>
+        <span class="brand__text">
+          <span class="brand__name">Dmytro Makhanok</span>
+          <span class="brand__slogan">Softvérový inžinier a študent aplikovanej informatiky</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav no-print" id="primary-nav" aria-label="Hlavná navigácia">
+    <ul class="container nav__list">
+      <li class="nav__item"><a href="../index.html" class="nav__link">Profil</a></li>
+      <li class="nav__item"><a href="cv.html" class="nav__link">Životopis</a></li>
+      <li class="nav__item"><a href="workspace.html" class="nav__link nav__link--active" aria-current="page">Moje koníčky</a></li>
+      <li class="nav__item"><a href="schedule.html" class="nav__link">Kedy ma zastihnete</a></li>
+      <li class="nav__item"><a href="map.html" class="nav__link">Kde ma nájdete</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="container">
+    <h1>Moje koníčky</h1>
+    <p>
+      Toto sú veci, ktoré nájdem na svojom stole skoro každý deň. Ukazujú, čomu sa venujem
+      v škole, v práci aj vo voľnom čase — od programovania cez čítanie až po posilňovanie.
+    </p>
+
+    <section class="workspace-section">
+      <h2>Čo mám na stole</h2>
+      <p>
+        Prejdi myšou, ťukni prstom (alebo sa presuň klávesnicou pomocou Tab) na niektorý
+        z piatich označených predmetov na fotke a dozvieš sa o ňom viac.
+      </p>
+
+      <div class="workspace-layout">
+        <div class="workspace-image-wrap">
+          <img
+            src="../img/workspace.jpg"
+            alt="Pohľad zhora na môj pracovný stôl: zápisník, notebook s kódom na obrazovke, kniha, šejker a činka"
+            class="workspace-image"
+            width="1586"
+            height="992">
+
+          <div class="hotspots" id="hotspots"></div>
+        </div>
+
+        <aside class="workspace-panel">
+          <p class="hotspot-panel hotspot-panel--placeholder">
+            Zatiaľ nie je vybraný žiadny predmet. Prejdi myšou, ťukni prstom alebo sa presuň
+            klávesnicou na jednu z piatich značiek na fotke.
+          </p>
+          <div class="hotspot-panels" id="hotspotPanels"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer no-print">
+    <div class="container footer__inner">
+      <address>
+        Dmytro Makhanok, Bratislava ·
+        <a href="mailto:dmmhnk23@gmail.com">dmmhnk23@gmail.com</a> ·
+        <a href="tel:+421952061292">+421 952 061 292</a>
+      </address>
+      <p>
+        &copy; 2026 Dmytro Makhanok · Fotografie: vlastné ·
+        Mapové podklady: <a href="https://www.openstreetmap.org/copyright">&copy; prispievatelia OpenStreetMap</a> ·
+        Knižnica: <a href="https://leafletjs.com/">Leaflet</a> ·
+        Písmo: <a href="https://github.com/itfoundry/Poppins">Poppins</a> (SIL Open Font License 1.1)
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/workspace.js"></script>
+</body>
+</html>
